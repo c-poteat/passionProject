@@ -9,5 +9,5 @@ The user starts the application by tapping a button which leads to a main menu. 
 
 * Grocery lists can be modified and deleted which will affect available suggestions. 
 
-* Lists can also be used as a template for grocery shopping. Instead of searching for recipes.
+* Lists can also be used as a template for grocery shopping instead of searching for recipes.
 
