@@ -1,4 +1,4 @@
-### Passion Project: **RecipeLinker**
+### Passion Project: **RecipeLinkerList**
 
 * *RecipeLinker* is a mobile application that allows the user to enter grocery items for recommended *recipe* suggestions.  
 The user starts the application by tapping a button which leads to a main menu. The main menu will have navigation areas such as Create New Grocery List, View Grocery List Data, Update Grocery List, Delete Grocery Lists and *Recipe* *Engine*. 
