@@ -1,0 +1,25 @@
+{
+  "name": "GroceryItem",
+  "fields": [
+    {
+      "fieldName": "item",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "category",
+      "fieldType": "Category",
+      "fieldValues": "BAKING,BEVERAGES,BREAD,CANNEDGOODS,CEREAL,CONDIMENTS,DAIRY,FISH,FROZENFOOD,FRUIT,GRAIN,HOMEITEMS,MEAT,PET,PRODUCE,SNACKS,SPICES,TOILETRIES"
+    }
+  ],
+  "relationships": [],
+  "entityTableName": "grocery_item",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20211225023110"
+}

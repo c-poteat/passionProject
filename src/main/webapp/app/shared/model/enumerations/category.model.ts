@@ -1,0 +1,37 @@
+export enum Category {
+  BAKING = 'BAKING',
+
+  BEVERAGES = 'BEVERAGES',
+
+  BREAD = 'BREAD',
+
+  CANNEDGOODS = 'CANNEDGOODS',
+
+  CEREAL = 'CEREAL',
+
+  CONDIMENTS = 'CONDIMENTS',
+
+  DAIRY = 'DAIRY',
+
+  FISH = 'FISH',
+
+  FROZENFOOD = 'FROZENFOOD',
+
+  FRUIT = 'FRUIT',
+
+  GRAIN = 'GRAIN',
+
+  HOMEITEMS = 'HOMEITEMS',
+
+  MEAT = 'MEAT',
+
+  PET = 'PET',
+
+  PRODUCE = 'PRODUCE',
+
+  SNACKS = 'SNACKS',
+
+  SPICES = 'SPICES',
+
+  TOILETRIES = 'TOILETRIES',
+}

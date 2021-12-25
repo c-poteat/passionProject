@@ -1,0 +1,31 @@
+
+entity GroceryItem {
+	Item String,
+        category Category
+}
+
+enum Category {
+BAKING,
+BEVERAGES,
+BREAD,
+CANNEDGOODS,
+CEREAL,
+CONDIMENTS,
+DAIRY,
+FISH,
+FROZENFOOD, 
+FRUIT, 
+GRAIN,
+HOMEITEMS,
+MEAT, 
+PET, 
+PRODUCE, 
+SNACKS, 
+SPICES,
+TOILETRIES
+}
+
+entity FavoriteRecipes {
+favoritelinks String
+}
+

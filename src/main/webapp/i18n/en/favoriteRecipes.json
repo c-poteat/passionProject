@@ -1,0 +1,24 @@
+{
+  "recipeApplicationApp": {
+    "favoriteRecipes": {
+      "home": {
+        "title": "Favorite Recipes",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Favorite Recipes",
+        "createOrEditLabel": "Create or edit a Favorite Recipes",
+        "notFound": "No Favorite Recipes found"
+      },
+      "created": "A new Favorite Recipes is created with identifier {{ param }}",
+      "updated": "A Favorite Recipes is updated with identifier {{ param }}",
+      "deleted": "A Favorite Recipes is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Favorite Recipes {{ id }}?"
+      },
+      "detail": {
+        "title": "Favorite Recipes"
+      },
+      "id": "ID",
+      "favoritelinks": "Favoritelinks"
+    }
+  }
+}

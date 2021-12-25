@@ -1,0 +1,25 @@
+{
+  "recipeApplicationApp": {
+    "groceryItem": {
+      "home": {
+        "title": "Grocery Items",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Grocery Item",
+        "createOrEditLabel": "Create or edit a Grocery Item",
+        "notFound": "No Grocery Items found"
+      },
+      "created": "A new Grocery Item is created with identifier {{ param }}",
+      "updated": "A Grocery Item is updated with identifier {{ param }}",
+      "deleted": "A Grocery Item is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Grocery Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Grocery Item"
+      },
+      "id": "ID",
+      "item": "Item",
+      "category": "Category"
+    }
+  }
+}
