@@ -17,14 +17,14 @@ export const Home = () => {
       </Col>
       <Col md="5">
         <h2>
-          <Translate contentKey="home.title">Recipe Linker</Translate>
+          <Translate contentKey="home.title">RecipeLink</Translate>
         </h2>
         <p className="lead">
           <Translate contentKey="home.subtitle">Main Menu</Translate>
         </p>
         {account?.login ? (
           <div>
-            <Alert color="primary">
+            <Alert color="info">
               <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
                 You are logged in as user {account.login}.
               </Translate>
@@ -32,7 +32,7 @@ export const Home = () => {
           </div>
         ) : (
           <div>
-            <Alert color="primary">
+            <Alert color="info">
               <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
 
               <Link to="/login" className="alert-link">
@@ -45,7 +45,7 @@ export const Home = () => {
               </Translate>
             </Alert>
 
-            <Alert color="primary">
+            <Alert color="info">
               <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
               <Link to="/account/register" className="alert-link">
                 <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
