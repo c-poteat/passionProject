@@ -21,6 +21,8 @@ logging:
     com.mycompany.recipeapplication: DEBUG
 
 spring:
+  profiles:
+  active: dev, swagger
   devtools:
     restart:
       enabled: true
