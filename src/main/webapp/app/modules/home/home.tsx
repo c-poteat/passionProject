@@ -44,13 +44,14 @@ export const Home = () => {
                 <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
               </Translate>
             </Alert>
-
             <Alert color="success">
               <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
               <Link to="/account/register" className="alert-link">
                 <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
               </Link>
             </Alert>
+
+            <a href="https://spoonacular.com/">Search for recipes on spoonacular!</a>
           </div>
         )}
       </Col>
