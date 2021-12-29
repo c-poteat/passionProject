@@ -62,7 +62,7 @@ export const GroceryItem = (props: RouteComponentProps<{ url: string }>) => {
               {groceryItemList.map((groceryItem, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
                   <td>
-                    <Button tag={Link} to={`${match.url}/${groceryItem.id}`} color="link" size="sm">
+                    <Button tag={Link} to={`${match.url}/${groceryItem.id}`} color="primary" size="sm">
                       {groceryItem.id}
                     </Button>
                   </td>

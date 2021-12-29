@@ -59,11 +59,15 @@ export const FavoriteRecipes = (props: RouteComponentProps<{ url: string }>) => 
               {favoriteRecipesList.map((favoriteRecipes, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
                   <td>
-                    <Button tag={Link} to={`${match.url}/${favoriteRecipes.id}`} color="link" size="sm">
+                    <Button tag={Link} to={`${match.url}/${favoriteRecipes.id}`} color="primary" size="sm">
                       {favoriteRecipes.id}
                     </Button>
                   </td>
-                  <td>{favoriteRecipes.favoritelinks}</td>
+                  <td>
+                    <a href={favoriteRecipes.favoritelinks}>
+                      <div>{favoriteRecipes.favoritelinks}</div>
+                    </a>
+                  </td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${favoriteRecipes.id}`} color="info" size="sm" data-cy="entityDetailsButton">
