@@ -1,13 +1,30 @@
 import './home.scss';
-
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert, Button } from 'reactstrap';
-
+import Axios from 'axios';
 import { useAppSelector } from 'app/config/store';
 
-export const Home = () => {
+function recipeSearch() {
+  const [recipe, setRecipe] = useState('');
+
+  const getRecipe = () => {
+    fetch('https://api.chucknorris.io/jokes/random')
+      .then(response => response.json())
+      .then(data => {
+        setRecipe(data.value + '...' + data.month);
+        // eslint-disable-next-line no-console
+      });
+  };
+  return (
+    <div>
+      Hello Youtube<button onClick={getRecipe}>Get Recipes</button>
+      {recipe}
+    </div>
+  );
+}
+export const home = () => {
   const account = useAppSelector(state => state.authentication.account);
 
   return (
@@ -29,6 +46,17 @@ export const Home = () => {
                 You are logged in as user {account.login}.
               </Translate>
             </Alert>
+
+            <Col md="5">
+              <h2>
+                <input type="text" placeholder="search..."></input>
+              </h2>
+              <Alert color="success"></Alert>
+              <div>
+                <button onClick={recipeSearch}>Get Recipes</button>
+              </div>
+            </Col>
+            <Alert color="light"></Alert>
           </div>
         ) : (
           <div>
@@ -50,8 +78,7 @@ export const Home = () => {
                 <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
               </Link>
             </Alert>
-
-            <a href="https://spoonacular.com/">Search for recipes on spoonacular!</a>
+            <Alert color="light"></Alert>
           </div>
         )}
       </Col>
@@ -59,4 +86,4 @@ export const Home = () => {
   );
 };
 
-export default Home;
+export default recipeSearch;

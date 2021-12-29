@@ -17,7 +17,7 @@ export const Login = (props: RouteComponentProps<any>) => {
   }, []);
 
   const handleLogin = (username, password, rememberMe = false) => dispatch(login(username, password, rememberMe));
-
+  <a href="https://spoonacular.com/">Search for recipes on spoonacular!</a>;
   const handleClose = () => {
     setShowModal(false);
     props.history.push('/');
@@ -29,6 +29,7 @@ export const Login = (props: RouteComponentProps<any>) => {
     return <Redirect to={from} />;
   }
   return <LoginModal showModal={showModal} handleLogin={handleLogin} handleClose={handleClose} loginError={loginError} />;
+  <a href="https://spoonacular.com/">Search for recipes on spoonacular!</a>;
 };
 
 export default Login;
