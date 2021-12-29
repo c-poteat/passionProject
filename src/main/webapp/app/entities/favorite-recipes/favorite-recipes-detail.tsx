@@ -22,32 +22,33 @@ export const FavoriteRecipesDetail = (props: RouteComponentProps<{ id: string }>
         <h2 data-cy="favoriteRecipesDetailsHeading">
           <Translate contentKey="recipeApplicationApp.favoriteRecipes.detail.title">FavoriteRecipes</Translate>
         </h2>
-        <dl className="jh-entity-details">
-          <dt>
-            <span id="id">
-              <Translate contentKey="global.field.id">ID</Translate>
-            </span>
-          </dt>
-          <dd>{favoriteRecipesEntity.id}</dd>
-          <dt>
-            <span id="favoritelinks">
-              <Translate contentKey="recipeApplicationApp.favoriteRecipes.favoritelinks">Favoritelinks</Translate>
-            </span>
-          </dt>
-          <dd>{favoriteRecipesEntity.favoritelinks}</dd>
-        </dl>
+        {/* <dl className="jh-entity-details"> */}
+        <dt>
+          <span id="id">
+            <Translate contentKey="global.field.id">ID</Translate>
+          </span>
+        </dt>
+        <dd>{favoriteRecipesEntity.id}</dd>
+        <dt>
+          <span id="favoritelinks">
+            <Translate contentKey="recipeApplicationApp.favoriteRecipes.favoritelinks">Favoritelinks</Translate>
+          </span>
+        </dt>
+        <td>
+          <a href={favoriteRecipesEntity.favoritelinks}>
+            <div>{favoriteRecipesEntity.favoritelinks}</div>
+          </a>
+        </td>
+        {/* <dd>{favoriteRecipesEntity.favoritelinks}</dd>  */}
+        {/* </dl> */}
         <Button tag={Link} to="/favorite-recipes" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}
-          <span className="d-none d-md-inline">
-            <Translate contentKey="entity.action.back">Back</Translate>
-          </span>
+          <span className="d-none d-md-inline">{/* <Translate contentKey="entity.action.back">Back</Translate> */}</span>
         </Button>
         &nbsp;
         <Button tag={Link} to={`/favorite-recipes/${favoriteRecipesEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
-          <span className="d-none d-md-inline">
-            <Translate contentKey="entity.action.edit">Edit</Translate>
-          </span>
+          <span className="d-none d-md-inline">{/* <Translate contentKey="entity.action.edit">Edit</Translate> */}</span>
         </Button>
       </Col>
     </Row>

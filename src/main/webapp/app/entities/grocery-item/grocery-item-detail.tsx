@@ -44,16 +44,12 @@ export const GroceryItemDetail = (props: RouteComponentProps<{ id: string }>) =>
         </dl>
         <Button tag={Link} to="/grocery-item" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" />{' '}
-          <span className="d-none d-md-inline">
-            <Translate contentKey="entity.action.back">Back</Translate>
-          </span>
+          <span className="d-none d-md-inline">{/* <Translate contentKey="entity.action.back">Back</Translate> */}</span>
         </Button>
         &nbsp;
         <Button tag={Link} to={`/grocery-item/${groceryItemEntity.id}/edit`} replace color="primary">
           <FontAwesomeIcon icon="pencil-alt" />{' '}
-          <span className="d-none d-md-inline">
-            <Translate contentKey="entity.action.edit">Edit</Translate>
-          </span>
+          <span className="d-none d-md-inline">{/* <Translate contentKey="entity.action.edit">Edit</Translate> */}</span>
         </Button>
       </Col>
     </Row>

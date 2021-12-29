@@ -50,7 +50,7 @@ export const FavoriteRecipes = (props: RouteComponentProps<{ url: string }>) => 
                   <Translate contentKey="recipeApplicationApp.favoriteRecipes.id">ID</Translate>
                 </th>
                 <th>
-                  <Translate contentKey="recipeApplicationApp.favoriteRecipes.favoritelinks">Favoritelinks</Translate>
+                  <Translate contentKey="recipeApplicationApp.favoriteRecipes.favoritelinks">Favoritelinks****</Translate>
                 </th>
                 <th />
               </tr>
