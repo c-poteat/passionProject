@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert, Button } from 'reactstrap';
-import Axios from 'axios';
 import { useAppSelector } from 'app/config/store';
 
 function recipeSearch() {
@@ -24,7 +23,7 @@ function recipeSearch() {
     </div>
   );
 }
-export const home = () => {
+export const Home = () => {
   const account = useAppSelector(state => state.authentication.account);
 
   return (
@@ -46,12 +45,11 @@ export const home = () => {
                 You are logged in as user {account.login}.
               </Translate>
             </Alert>
-
             <Col md="5">
-              <h2>
-                <input type="text" placeholder="search..."></input>
-              </h2>
-              <Alert color="success"></Alert>
+              <h6>
+                <input type="text" placeholder="search for recipes..."></input>
+              </h6>
+
               <div>
                 <button onClick={recipeSearch}>Get Recipes</button>
               </div>
@@ -86,4 +84,4 @@ export const home = () => {
   );
 };
 
-export default recipeSearch;
+export default Home;
