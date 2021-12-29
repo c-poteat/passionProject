@@ -10,6 +10,7 @@ function recipeSearch() {
 
   const getRecipe = () => {
     fetch('https://api.chucknorris.io/jokes/random')
+      // Placeholder API until errors get fixed
       .then(response => response.json())
       .then(data => {
         setRecipe(data.value + '...' + data.month);
@@ -23,6 +24,7 @@ function recipeSearch() {
     </div>
   );
 }
+// Error invalid hook error below, function by itself works
 export const Home = () => {
   const account = useAppSelector(state => state.authentication.account);
 
