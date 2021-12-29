@@ -2,8 +2,16 @@ import './home.scss';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
-import { Row, Col, Alert, Button } from 'reactstrap';
+import { Row, Col, Alert } from 'reactstrap';
 import { useAppSelector } from 'app/config/store';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: black;
+  display: inline-block;
+  color: white;
+  }
+`;
 
 function recipeSearch() {
   const [recipe, setRecipe] = useState('');
@@ -19,7 +27,7 @@ function recipeSearch() {
   };
   return (
     <div>
-      Hello Youtube<button onClick={getRecipe}>Get Recipes</button>
+      Hello Youtube<Button onClick={getRecipe}>Get Recipes</Button>
       {recipe}
     </div>
   );

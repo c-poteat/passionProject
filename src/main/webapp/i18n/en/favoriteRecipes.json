@@ -2,7 +2,7 @@
   "recipeApplicationApp": {
     "favoriteRecipes": {
       "home": {
-        "title": "Favorite Recipes",
+        "title": "Favorite Online Recipes",
         "refreshListLabel": "Refresh list",
         "createLabel": "Add Favorite Recipe Link",
         "createOrEditLabel": "Create or edit a Favorite Recipes",
@@ -15,7 +15,7 @@
         "question": "Are you sure you want to delete Favorite Recipes {{ id }}?"
       },
       "detail": {
-        "title": "Favorite Recipes"
+        "title": "Favorite Online Recipes"
       },
       "id": "ID",
       "favoritelinks": "Favoritelinks"
