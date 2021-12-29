@@ -39,7 +39,7 @@ public class FavoriteRecipesResource {
     }
 
     /**
-     * {@code POST  /favorite-recipes} : Create a new favoriteRecipes.
+     * {@code POST  /favorite-recipes} : Create new favoriteRecipes.
      *
      * @param favoriteRecipes the favoriteRecipes to create.
      * @return the {@link ResponseEntity} with status {@code 201 (Created)} and with body the new favoriteRecipes, or with status {@code 400 (Bad Request)} if the favoriteRecipes has already an ID.

@@ -4,7 +4,7 @@
       "home": {
         "title": "Favorite Recipes",
         "refreshListLabel": "Refresh list",
-        "createLabel": "Create a new Favorite Recipes",
+        "createLabel": "Add Favorite Recipe Link",
         "createOrEditLabel": "Create or edit a Favorite Recipes",
         "notFound": "No Favorite Recipes found"
       },
