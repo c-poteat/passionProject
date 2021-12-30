@@ -15,8 +15,7 @@ const Button = styled.button`
 
 function recipeSearch() {
   const [recipe, setRecipe] = useState('');
-
-  const getRecipe = () => {
+  const handleClick = e => {
     fetch('https://api.chucknorris.io/jokes/random')
       // Placeholder API until errors get fixed
       .then(response => response.json())
@@ -25,15 +24,7 @@ function recipeSearch() {
         // eslint-disable-next-line no-console
       });
   };
-  return (
-    <div>
-      Hello Youtube<Button onClick={getRecipe}>Get Recipes</Button>
-      {recipe}
-    </div>
-  );
-}
-// Error invalid hook error below, function by itself works
-export const Home = () => {
+
   const account = useAppSelector(state => state.authentication.account);
 
   return (
@@ -61,7 +52,10 @@ export const Home = () => {
               </h6>
 
               <div>
-                <button onClick={recipeSearch}>Get Recipes</button>
+                <Alert color="light"></Alert>
+                <button onClick={handleClick}>Get Recipes</button>
+                <Alert color="light"></Alert>
+                {recipe}
               </div>
             </Col>
             <Alert color="light"></Alert>
@@ -92,6 +86,6 @@ export const Home = () => {
       </Col>
     </Row>
   );
-};
+}
 
-export default Home;
+export default recipeSearch;
