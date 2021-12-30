@@ -1,4 +1,5 @@
 import './home.scss';
+import './key';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
@@ -16,7 +17,10 @@ const Button = styled.button`
 function recipeSearch() {
   const [recipe, setRecipe] = useState('');
   const handleClick = e => {
-    fetch('https://api.chucknorris.io/jokes/random')
+    `https://api.edamam.com/search?q=chicken&app_id=$90e2bef5&app_key=$04aed375dc2eca5262d42cdf259b1a86&from=0&to=3&calories=591-722&health=alcohol-free`;
+    fetch(
+      'https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free'
+    )
       // Placeholder API until errors get fixed
       .then(response => response.json())
       .then(data => {
