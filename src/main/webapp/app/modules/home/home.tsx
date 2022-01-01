@@ -1,32 +1,33 @@
 import './home.scss';
-import './key';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
 import { useAppSelector } from 'app/config/store';
-import styled from 'styled-components';
+import Axios from 'axios';
+import RecipeTile from '../components/RecipeTile';
+import '../components/RecipeTile.css';
+import '../components/App.css';
 
-const Button = styled.button`
-  background-color: black;
-  display: inline-block;
-  color: white;
+function App() {
+  const [query, setquery] = useState(''); // use state is updating the value in the frontend
+  const [recipes, setrecipes] = useState([]);
+
+  const YOUR_APP_ID = '052a1f0c';
+  const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
+  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=12&calories=591-722&health=alcohol-free`;
+
+  // `https://api.edamam.com/search?q=$chicken&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6&health=alcohol-free`;
+
+  async function getRecipes() {
+    const result = await Axios.get(url);
+    setrecipes(result.data.hits);
+    console.log(result.data);
   }
-`;
 
-function recipeSearch() {
-  const [recipe, setRecipe] = useState('');
-  const handleClick = e => {
-    `https://api.edamam.com/search?q=chicken&app_id=$90e2bef5&app_key=$04aed375dc2eca5262d42cdf259b1a86&from=0&to=3&calories=591-722&health=alcohol-free`;
-    fetch(
-      'https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=591-722&health=alcohol-free'
-    )
-      // Placeholder API until errors get fixed
-      .then(response => response.json())
-      .then(data => {
-        setRecipe(data.value + '...' + data.month);
-        // eslint-disable-next-line no-console
-      });
+  const onSubmit = e => {
+    e.preventDefault(); // prevent page from reloading
+    getRecipes();
   };
 
   const account = useAppSelector(state => state.authentication.account);
@@ -50,16 +51,28 @@ function recipeSearch() {
                 You are logged in as user {account.login}.
               </Translate>
             </Alert>
-            <Col md="5">
-              <h6>
-                <input type="text" placeholder="search for recipes..."></input>
-              </h6>
+            <Col md="7">
+              <div className="app">
+                <h4> Search for Recipes </h4>
+                <form className="app__searchForm" onSubmit={onSubmit}>
+                  <input
+                    type="text"
+                    className="app__input"
+                    placeholder="Find Recipes"
+                    value={query}
+                    onChange={e => setquery(e.target.value)}
+                  />
+                  <input className="app__submit" type="submit" value="Search" />
+                </form>
 
-              <div>
-                <Alert color="light"></Alert>
-                <button onClick={handleClick}>Get Recipes</button>
-                <Alert color="light"></Alert>
-                {recipe}
+                <div className="app__recipes" key="recipe">
+                  {recipes.map(recipe => {
+                    // import file above
+                    return <p>{recipe['recipe']['label']}</p>;
+
+                    // <RecipeTile recipe={recipe}/>
+                  })}
+                </div>
               </div>
             </Col>
             <Alert color="light"></Alert>
@@ -92,4 +105,4 @@ function recipeSearch() {
   );
 }
 
-export default recipeSearch;
+export default App;

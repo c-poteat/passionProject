@@ -1,0 +1,16 @@
+.recipeTile {
+  cursor: pointer;
+  /* // add cursor over photos for weblink */
+}
+
+.recipeTile__img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.recipeTile__name {
+  max-width: 200px;
+  text-align: center;
+  margin: 12px 0px;
+}
