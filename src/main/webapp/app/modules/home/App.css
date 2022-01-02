@@ -2,38 +2,42 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 40px 24px;
 }
 
 .app__searchForm {
   margin-top: 18px;
+  margin-left: 85px;
 }
 
 .app__input {
   padding: 6px 16px;
-  min-width: 200px;
+  min-width: 400px;
   max-width: 100vw;
   font-size: 14px;
 }
 
 .app__submit {
-  padding: 6px 16px;
+  position: absolute;
+  top: 142px;
+  padding: 6px 25px;
   font-size: 14px;
-  margin-left: 6px;
+  margin-left: 405px;
   background-color: orange;
   border: 2px solid orange;
   border-radius: 4px;
   color: black;
 }
 .app__submit:hover {
-  padding: 6px 16px;
+  position: absolute;
+  top: 142px;
+  padding: 6px 25px;
   font-size: 14px;
-  margin-left: 6px;
-  background-color: white;
+  margin-left: 405px;
+  background-color: rgb(252, 251, 249);
   border: 2px solid orange;
   border-radius: 4px;
-  color: orange;
+  color: black;
 }
 .app__recipes {
   margin-top: 24px;

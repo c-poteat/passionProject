@@ -5,7 +5,8 @@ import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
 import { useAppSelector } from 'app/config/store';
 import Axios from 'axios';
-import RecipeTile from '../Components/RecipeTile';
+import './RecipeTile.css';
+import './App.css';
 
 function recipeSearch() {
   const [query, setquery] = useState(''); // use state is updating the value in the frontend
@@ -29,7 +30,6 @@ function recipeSearch() {
   };
 
   const account = useAppSelector(state => state.authentication.account);
-
   return (
     <Row>
       <Col md="3" className="pad">
@@ -44,14 +44,8 @@ function recipeSearch() {
         </p>
         {account?.login ? (
           <div>
-            <Alert color="success">
-              <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
-                You are logged in as user {account.login}.
-              </Translate>
-            </Alert>
             <Col md="5">
               <div className="app">
-                <h1> RecipeLink </h1>
                 <form className="app__searchForm" onSubmit={onSubmit}>
                   <input
                     type="text"
@@ -69,7 +63,7 @@ function recipeSearch() {
                     return (
                       <>
                         <img className="recipeTile__img" src={recipe['recipe']['image']} />
-                        <p className="recipeTile__name">{recipe['recipe']['label']}</p>
+                        <h5 className="recipeTile__name">{recipe['recipe']['label']}</h5>
                       </>
                     );
                   })}
