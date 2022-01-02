@@ -63,6 +63,9 @@ function recipeSearch() {
                     return (
                       <>
                         <img className="recipeTile__img" src={recipe['recipe']['image']} />
+                        {/*                     
+                        <div className="recipeTile">onClick={window.open(recipe["recipe"]["url"])}</div>  */}
+
                         <h5 className="recipeTile__name">{recipe['recipe']['label']}</h5>
                       </>
                     );
