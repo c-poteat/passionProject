@@ -30,7 +30,7 @@ export const FavoriteRecipes = (props: RouteComponentProps<{ url: string }>) => 
       <h2 id="favorite-recipes-heading" data-cy="FavoriteRecipesHeading">
         <Translate contentKey="recipeApplicationApp.favoriteRecipes.home.title">Favorite Recipes</Translate>
         <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+          <Button className="me-2" color="info" size="sm" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="recipeApplicationApp.favoriteRecipes.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -108,7 +108,7 @@ export const FavoriteRecipes = (props: RouteComponentProps<{ url: string }>) => 
           </Table>
         ) : (
           !loading && (
-            <div className="alert alert-warning">
+            <div className="alert alert-info">
               <Translate contentKey="recipeApplicationApp.favoriteRecipes.home.notFound">No Favorite Recipes found</Translate>
             </div>
           )

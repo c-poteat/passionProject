@@ -89,7 +89,7 @@ export const FavoriteRecipesUpdate = (props: RouteComponentProps<{ id: string }>
                 data-cy="favoritelinks"
                 type="text"
               />
-              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/favorite-recipes" replace color="info">
+              <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/favorite-recipes" replace color="primary">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
                 <span className="d-none d-md-inline">
