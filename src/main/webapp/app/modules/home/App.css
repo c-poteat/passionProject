@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 40px 24px;
+  border-radius: 8px;
 }
 
 .app__searchForm {
