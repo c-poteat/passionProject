@@ -56,21 +56,23 @@ function recipeSearch() {
                   />
                   <input className="app__submit" type="submit" value="Search" />
                 </form>
-
-                <div className="app__recipes">
-                  {recipes.map(recipe => {
-                    // import file above
-                    return (
-                      <>
+              </div>
+              <div className="app__recipes">
+                {recipes.map(recipe => {
+                  return (
+                    <>
+                      <div
+                        className="recipeTile"
+                        onClick={() => {
+                          window.open(recipe['recipe']['url']);
+                        }}
+                      >
                         <img className="recipeTile__img" src={recipe['recipe']['image']} />
-                        {/*                     
-                        <div className="recipeTile">onClick={window.open(recipe["recipe"]["url"])}</div>  */}
-
-                        <h5 className="recipeTile__name">{recipe['recipe']['label']}</h5>
-                      </>
-                    );
-                  })}
-                </div>
+                        <p className="recipeTile__name">{recipe['recipe']['label']}</p>
+                      </div>
+                    </>
+                  );
+                })}
               </div>
             </Col>
             <Alert color="light"></Alert>
