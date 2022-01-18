@@ -1074,7 +1074,8 @@
                 <dependency>
                     <groupId>com.h2database</groupId>
                     <artifactId>h2</artifactId>
-                </dependency>
+                    <version>[2.0.206,)</version>
+                  </dependency>
             </dependencies>
             <properties>
                 <!-- default Spring profiles -->
