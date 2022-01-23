@@ -14,7 +14,7 @@ function recipeSearch() {
 
   const YOUR_APP_ID = '052a1f0c';
   const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=12&calories=591-722`;
+  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
   //  `https://api.edamam.com/search?q=${query}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6&health=alcohol-free`;
 
@@ -49,7 +49,7 @@ function recipeSearch() {
                 <form className="app__searchForm" onSubmit={onSubmit}>
                   <input
                     type="text"
-                    className="app__input"
+                    className="app__input-max"
                     placeholder="Find Recipes"
                     value={query}
                     onChange={e => setquery(e.target.value)}
