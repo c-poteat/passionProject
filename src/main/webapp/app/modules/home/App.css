@@ -31,10 +31,10 @@
 }
 .app__submit:hover {
   position: absolute;
-  top: 142px;
-  padding: 6px 25px;
+  top: 141px;
+  padding: 4px 25px;
   font-size: 14px;
-  margin-left: 405px;
+  margin-left: 190px;
   background-color: rgb(252, 251, 249);
   border: 2px solid orange;
   border-radius: 4px;
