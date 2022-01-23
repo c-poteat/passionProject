@@ -4,10 +4,10 @@
 }
 
 .recipeTile__img {
-  height: 200px;
-  width: 200px;
+  height: 600px;
+  width: 600px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 33px;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 4px;
   max-width: 100%;
@@ -15,7 +15,7 @@
 }
 
 .recipeTile__img:hover {
-  box-shadow: 0 0 5px 1px rgb(1, 114, 29);
+  box-shadow: 0 0 5px 2px rgb(1, 114, 29);
 }
 .recipeTile__name {
   max-width: 200px;
