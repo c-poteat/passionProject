@@ -16,7 +16,7 @@ function recipeSearch() {
   const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
   const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
-  //  `https://api.edamam.com/search?q=${query}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6&health=alcohol-free`;
+  //  `https://api.edamam.com/search?q=${quer}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6&from0-20`;
 
   async function getRecipes() {
     const result = await Axios.get(url);

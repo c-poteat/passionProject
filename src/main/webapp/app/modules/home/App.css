@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 40px 24px;
+  padding: 40px 20px;
   border-radius: 8px;
+  margin-left: -130px;
 }
 
 .app__searchForm {
@@ -42,9 +43,10 @@
 }
 .app__recipes {
   margin-top: 24px;
-  margin-left: 110px;
+  margin-left: -250px;
   display: grid;
-  grid-template-columns: 230px 230px 230px 230px;
+  grid-template-columns: 300px 300px 300px 300px;
   align-items: baseline;
   /* // grid has 4 values across */
 }
+ 
