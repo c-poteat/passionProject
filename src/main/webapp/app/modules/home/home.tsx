@@ -12,11 +12,11 @@ function recipeSearch() {
   const [query, setquery] = useState(''); // use state is updating the value in the frontend
   const [recipes, setrecipes] = useState([]);
 
-  const YOUR_APP_ID = '052a1f0c';
-  const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
-  const url = `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
+  // const YOUR_APP_ID = '052a1f0c';
+  // const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
+  const url = `https://api.edamam.com/search?q=${query}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6`;
 
-  //  `https://api.edamam.com/search?q=${quer}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6&from0-20`;
+  // `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
   async function getRecipes() {
     const result = await Axios.get(url);
@@ -67,8 +67,11 @@ function recipeSearch() {
                           window.open(recipe['recipe']['url']);
                         }}
                       >
-                        <img className="recipeTile__img" src={recipe['recipe']['image']} />
-                        <p className="recipeTile__name">{recipe['recipe']['label']}</p>
+                        <div className="card">
+                          <div className="card-body"> {recipe['recipe']['label']}</div>
+                          <img className="recipeTile__img" src={recipe['recipe']['image']} />
+                          <p className="recipeTile__name">Ingredients: {recipe['recipe']['ingredientLines']}</p>
+                        </div>
                       </div>
                     </>
                   );
