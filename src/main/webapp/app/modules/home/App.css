@@ -14,6 +14,7 @@
 }
 
 .app__input {
+  position: sticky;
   margin: 0 auto;
   min-width: 400px;
   max-width: 100vw;
@@ -21,7 +22,7 @@
 }
 
 .app__submit {
-  position: fixed;
+  position: sticky;
   margin-left: auto;
   margin-right: auto;
   font-size: 14px;
@@ -32,7 +33,7 @@
   color: black;
 }
 .app__submit:hover {
-  position: fixed;
+  position: sticky;
   margin-left: auto;
   margin-right: auto;
   justify-content: center;
@@ -49,4 +50,24 @@
   grid-template-columns: 300px 300px 300px 300px;
   align-items: baseline;
   /* // grid has 4 values across */
+}
+
+.card-name {
+  max-width: 2000px;
+  color: orange;
+  font-family: FreeLine;
+  font-size: 18px;
+  text-align: center;
+}
+
+.view-recipe {
+  position: sticky;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  justify-content: center;
+  background-color: orange;
+  border: 2px solid orange;
+  border-radius: 4px;
+  color: black;
 }

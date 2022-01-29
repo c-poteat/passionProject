@@ -1,6 +1,5 @@
 import './home.scss';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Translate } from 'react-jhipster';
 import { Row, Col, Alert } from 'reactstrap';
 import { useAppSelector } from 'app/config/store';
@@ -12,11 +11,7 @@ function recipeSearch() {
   const [query, setquery] = useState(''); // use state is updating the value in the frontend
   const [recipes, setrecipes] = useState([]);
 
-  // const YOUR_APP_ID = '052a1f0c';
-  // const YOUR_APP_KEY = 'df4f0e14428f5599ab2a09346234d1d6';
   const url = `https://api.edamam.com/search?q=${query}&app_id=052a1f0c&app_key=df4f0e14428f5599ab2a09346234d1d6`;
-
-  // `https://api.edamam.com/search?q=${query}&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}`;
 
   async function getRecipes() {
     const result = await Axios.get(url);
@@ -60,16 +55,12 @@ function recipeSearch() {
                 {recipes.map(recipe => {
                   return (
                     <>
-                      <div
-                        className="recipeTile"
-                        onClick={() => {
-                          window.open(recipe['recipe']['url']);
-                        }}
-                      >
+                      <div>
                         <div className="card">
-                          <div className="card-body"> {recipe['recipe']['label']}</div>
+                          <div className="card-name"> {recipe['recipe']['label']}</div>
                           <img className="recipeTile__img" src={recipe['recipe']['image']} />
-                          <p className="recipeTile__name">Ingredients: {recipe['recipe']['ingredientLines']}</p>
+                          <button className='view-recipe'
+                          onClick={() => {window.open(recipe['recipe']['url']);}}>View Recipe</button>
                         </div>
                       </div>
                     </>
