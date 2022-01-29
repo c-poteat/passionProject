@@ -42,7 +42,6 @@ function recipeSearch() {
         <p className="lead">
           <Translate contentKey="home.subtitle">Main Menu</Translate>
         </p>
-        {account?.login ? (
           <div>
             <Col md="5">
               <div className="app">
@@ -80,29 +79,8 @@ function recipeSearch() {
             </Col>
             <Alert color="light"></Alert>
           </div>
-        ) : (
           <div>
-            <Alert color="success">
-              <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate>
-
-              <Link to="/login" className="alert-link">
-                <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate>
-              </Link>
-              <Translate contentKey="global.messages.info.authenticated.suffix">
-                , you can try the default accounts:
-                <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;)
-                <br />- User (login=&quot;user&quot; and password=&quot;user&quot;).
-              </Translate>
-            </Alert>
-            <Alert color="success">
-              <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
-              <Link to="/account/register" className="alert-link">
-                <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
-              </Link>
-            </Alert>
-            <Alert color="light"></Alert>
           </div>
-        )}
       </Col>
     </Row>
   );

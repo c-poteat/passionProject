@@ -8,34 +8,35 @@
 }
 
 .app__searchForm {
-  margin-top: 18px;
-  margin-left: 575px;
+  margin: 0 auto;
+  margin-left: 275px;
+  position: sticky;
 }
 
 .app__input {
-  padding: 6px 16px;
+  margin: 0 auto;
   min-width: 400px;
   max-width: 100vw;
   font-size: 14px;
 }
 
 .app__submit {
-  position: absolute;
-  top: 141px;
-  padding: 4px 25px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 14px;
-  margin-left: 190px;
+  justify-content: center;
   background-color: orange;
   border: 2px solid orange;
   border-radius: 4px;
   color: black;
 }
 .app__submit:hover {
-  position: absolute;
-  top: 141px;
-  padding: 4px 25px;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   font-size: 14px;
-  margin-left: 190px;
   background-color: rgb(252, 251, 249);
   border: 2px solid orange;
   border-radius: 4px;
