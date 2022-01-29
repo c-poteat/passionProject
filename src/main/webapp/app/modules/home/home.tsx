@@ -61,6 +61,7 @@ function recipeSearch() {
                           <img className="recipeTile__img" src={recipe['recipe']['image']} />
                           <button className='view-recipe'
                           onClick={() => {window.open(recipe['recipe']['url']);}}>View Recipe</button>
+                          <button className='save-favorite'>Save Recipe</button>
                         </div>
                       </div>
                     </>
